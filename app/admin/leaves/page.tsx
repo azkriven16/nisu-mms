@@ -524,7 +524,7 @@ export default function LeavesPage() {
                                             Date Range
                                         </Label>
                                         <DatePickerWithRange
-                                            date={filters.dateRange}
+                                            date={filters.dateRange!}
                                             setDate={(range) =>
                                                 setDateRangeFilter(range)
                                             }
