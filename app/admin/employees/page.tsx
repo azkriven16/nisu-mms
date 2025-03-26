@@ -342,10 +342,10 @@ export default function EmployeesPage() {
                                 Employee
                             </TableHead>
                             <TableHead className="hidden md:table-cell">
-                                Department
+                                Academic Rank
                             </TableHead>
                             <TableHead className="hidden md:table-cell">
-                                Position
+                                Educational Attainment
                             </TableHead>
                             <TableHead className="hidden sm:table-cell">
                                 Status

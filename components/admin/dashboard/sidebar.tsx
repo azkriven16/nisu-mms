@@ -35,21 +35,6 @@ const navItems = [
         icon: BarChart3,
     },
     {
-        title: "Departments",
-        href: "/admin/departments",
-        icon: Users,
-    },
-    {
-        title: "Leaves",
-        href: "/admin/leaves",
-        icon: Package,
-    },
-    {
-        title: "Documents",
-        href: "/admin/documents",
-        icon: FileText,
-    },
-    {
         title: "Settings",
         href: "/admin/settings",
         icon: Settings,
