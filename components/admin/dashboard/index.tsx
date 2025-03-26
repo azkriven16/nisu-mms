@@ -56,6 +56,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import UploadDocument from "./upload-document";
 
 // Mock data for documents
 const documents = [
@@ -140,7 +141,8 @@ const documents = [
         employeeId: "EMP004",
         employeeName: "Emily Rodriguez",
         department: "Human Resources",
-        category: "Transcript of Records (Bachelor's Degree, Masters, Doctorate)",
+        category:
+            "Transcript of Records (Bachelor's Degree, Masters, Doctorate)",
         format: "JPG",
         size: "521 KB",
         status: "Active",
@@ -245,7 +247,8 @@ const documents = [
         employeeId: "EMP011",
         employeeName: "James Wilson",
         department: "Mathematics",
-        category: "Transcript of Records (Bachelor's Degree, Masters, Doctorate)",
+        category:
+            "Transcript of Records (Bachelor's Degree, Masters, Doctorate)",
         format: "DOCX",
         size: "620 KB",
         status: "Under Review",
@@ -318,7 +321,7 @@ const documentFormats = ["PDF", "DOCX", "JPG", "PNG", "XLSX"];
 // Status options for filtering
 const statusOptions = ["Active", "Expiring Soon", "Expired", "Under Review"];
 
-export default function DocumentsPage() {
+export default function Dashboard() {
     const [searchTerm, setSearchTerm] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(5);
@@ -477,10 +480,7 @@ export default function DocumentsPage() {
                 <h1 className="text-2xl font-bold tracking-tight">
                     Document Management
                 </h1>
-                <Button className="flex items-center gap-1">
-                    <Upload className="h-4 w-4" />
-                    Upload Document
-                </Button>
+                <UploadDocument />
             </div>
 
             {/* Statistics Cards */}

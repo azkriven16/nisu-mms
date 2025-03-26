@@ -26,17 +26,17 @@ import {
 const navItems = [
     {
         title: "Dashboard",
-        href: "/admin/dashboard",
+        href: "/",
         icon: LayoutDashboard,
     },
     {
         title: "Employees",
-        href: "/admin/employees",
+        href: "/employees",
         icon: BarChart3,
     },
     {
         title: "Settings",
-        href: "/admin/settings",
+        href: "/settings",
         icon: Settings,
     },
 ];

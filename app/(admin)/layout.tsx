@@ -1,14 +1,22 @@
 import type * as React from "react";
 
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
-import { DashboardSidebar } from "@/components/user/dashboard/sidebar";
-import { DashboardHeader } from "@/components/user/dashboard/header";
+import { DashboardSidebar } from "@/components/admin/dashboard/sidebar";
+import { DashboardHeader } from "@/components/admin/dashboard/header";
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 
 interface DashboardLayoutProps {
     children: React.ReactNode;
 }
 
-export default function DashboardLayout({ children }: DashboardLayoutProps) {
+export default async function DashboardLayout({
+    children,
+}: DashboardLayoutProps) {
+    const session = await auth();
+
+    if (!session) return redirect("/sign-in");
+
     return (
         <SidebarProvider>
             <DashboardSidebar />
